@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import Nav from '@/components/Nav';
 
 export const metadata: Metadata = {
-  title: 'n8n Operations Dashboard',
-  description: 'Monitoring de ejecuciones y costos de OpenAI en n8n',
+  title: 'Sistemas — Monitor',
+  description: 'Monitor de procesos automáticos',
 };
 
 export default function RootLayout({
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="min-h-screen bg-gray-50">{children}</body>
+      <body className="min-h-screen bg-[#f5f5f7] text-[#1d1d1f] antialiased">
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 }
